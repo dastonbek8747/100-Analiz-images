@@ -287,22 +287,44 @@ def analyze_image_with_retry(api_key, base64_image, selected_model, max_retries=
                         "content": [
                             {
                                 "type": "text",
-                                "text": """Bu rasmni juda batafsil tahlil qiling va o'zbek tilida javob bering:
+                                "text": """Rasmni juda batafsil va xolis tahlil qiling. Javobni faqat o'zbek tilida yozing.
 
-1. UMUMIY TAVSIF: Rasmda nima tasvirlangan?
-2. OB'EKTLAR: Qanday ob'ektlar bor? (ranglar, o'lchamlar, joylashuv)
-3. INSON: Agar rasmda odam bo'lsa:
-   - Jins (erkak/ayol)
+1. UMUMIY TAVSIF:
+   - Rasmning umumiy mazmuni, asosiy sahna va kompozitsiya markazida nima bor?
+
+2. OB'EKTLAR:
+   - Rasmda ko'rinadigan barcha asosiy ob'ektlarni sanang.
+   - Har bir ob'ekt uchun: rangi, shakli, o'lchami (katta/o'rta/kichik), joylashuvi (chap/o'ng/yuqori/past/markaz).
+
+3. INSON(lar) — Agar rasmda odam bo'lsa:
+   - Jinsi (erkak/ayol)
    - Taxminiy yosh
-   - Kiyim-kechak (ranglar, stil)
-   - Pozitsiya/harakat
+   - Kiyim-kechak: rangi, materiali, uslubi
+   - Pozitsiyasi yoki harakati
    - Yuz ifodasi
    - Soch rangi va uslubi
-   - Maxsus belgilar (ko'zoynak, soqol va h.k.)
-4. MASHINA: Agar mashina bo'lsa - turi, rangi, modeli, ishlab chiqaruvchi
-5. MUHIT: Orqa fon, joy, ob-havo sharoiti
+   - Maxsus belgilar: ko‘zoynak, soqol, tatuirovka, aksessuarlar va boshqalar
 
-Juda batafsil va aniq javob bering!"""
+4. TRANSPORT (agar bo'lsa):
+   - Turi (avtomobil, velosiped, moto va h.k.)
+   - Rangi
+   - Taxminiy modeli yoki klassi (sedan, SUV va boshqalar)
+   - Holati: harakatda yoki to'xtagan
+
+5. MUHIT:
+   - Orqa fon (shahar, tabiat, xona va boshqalar)
+   - Joylashuv xususiyatlari
+   - Ob-havo sharoiti (quyoshli, bulutli, yomg‘irli, tumanli va h.k.)
+   - Yoritilish (yorqin, tabiiy, sun’iy, qorong‘u, soyali)
+
+6. KOMPOZITSIYA VA USLUB:
+   - Kamera burchagi (yuqoridan, pastdan, frontal va h.k.)
+   - Kadr masofasi (yaqin plan, o‘rta plan, umumiy plan)
+   - Rang palitrasi va kayfiyat (issiq/sovuq, yorqin/so‘nuk ranglar)
+   - Estetik yoki san’at uslubi (minimalizm, realizm, dramatik yoritish va boshqalar)
+
+Juda batafsil, aniq va tizimli tarzda javob bering!"""
+
                             },
                             {
                                 "type": "image_url",
