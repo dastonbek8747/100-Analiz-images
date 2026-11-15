@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 url = "https://openrouter.ai/api/v1/chat/completions"
 headers = {
-    "Authorization": f"Bearer {os.getenv("API_KEY_REF")}",
+    "Authorization": f"Bearer {os.getenv('API_KEY_REF')}",
     "Content-Type": "application/json"
 }
 while True:
